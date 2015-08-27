@@ -1,21 +1,52 @@
 'use strict'
 
 function getStudents(){
-  // Write code here
+  $.ajax({
+    method: "GET",
+    url: "/students"
+  })
+    .done(function(students) {
+      listStudents(students, '#students-list');
+    });
 }
 
 function getStudent(id){
-  // Write code here
+  $.ajax({
+    method: "GET",
+    url: "/students/" + id
+  })
+    .done(function(student) {
+      showStudent(student);
+    });
 }
 
 function getStudentsByQuery(query){
-  // Write code here
+  $.ajax({
+    method: "GET",
+    url: '/students?q=' + query
+  })
+    .done(function(students) {
+      $('#students-list').empty();
+      listStudents(students, '#students-list');
+    });
 }
 
 function getCohort(id){
-  // Write code here
+  $.ajax({
+    method: "GET",
+    url: '/cohorts/' + id
+  })
+    .done(function(cohort) {
+      replaceCohortName(cohort.name);
+    });
 }
 
 function getStudentsForCohort(id){
-  // Write code here
+  $.ajax({
+    method: "GET",
+    url: '/cohorts/' + id + '/students'
+  })
+    .done(function(students) {
+      listStudents(students, '#cohort-students-list');
+    });
 }

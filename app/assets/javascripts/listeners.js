@@ -1,17 +1,39 @@
 'use strict'
 
 function addSearchListener(){
-  // Write code here
+  $('#name-field').on('keyup', function(){
+    var query = $(this).val();
+
+    getStudentsByQuery(query);
+  })
 }
 
 function addListenerOnStudentLink(){
-  // Write code here
+  $('#students-list').on('click', '.student-link', function(e){
+    e.stopPropagation();
+    e.preventDefault();
+
+    getStudent($(this).data("id"));
+    showContainer('#student-container');
+  });
 }
 
 function addListenerOnCohortLink(){
-  // Write code here
+  $('#student-cohort').on('click', 'a', function(e){
+    e.stopPropagation();
+    e.preventDefault();
+
+    getCohort($(this).data("id"));
+    getStudentsForCohort($(this).data("id"));
+    showContainer('#cohort-container');
+  });
 }
 
 function addListenerOnBackLink(){
-  // Write code here
+  $(".back-link").on('click', function(e){
+    e.stopPropagation();
+    e.preventDefault();
+
+    showContainer('#index-container');
+  });
 }
