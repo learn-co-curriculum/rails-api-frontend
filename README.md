@@ -1,4 +1,4 @@
-# Write Your Own API in Rails
+# Writing a JS Front-End for your API
 
 ## Introduction
 
