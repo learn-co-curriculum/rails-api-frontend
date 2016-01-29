@@ -10,4 +10,4 @@ To run the JS tests, run `rake jasmine`. Visit `localhost:8888`. Learn will not 
 
 Once your JS tests pass, run `learn --fail-fast` and make the RSpec tests pass!
 
-<a href='https://learn.co/lessons/rails-api-frontend' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-api-frontend' title='Writing a JS Front-End for your API'>Writing a JS Front-End for your API</a> on Learn.co and start learning to code for free.</p>
