@@ -1,8 +1,2 @@
-tags: 
-  - apis
-  - web
-  - request
-language: 
-  - ruby
-resources: 
-  - 0
+languages:
+  - none
